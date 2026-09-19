@@ -1,24 +1,46 @@
-import { notFound } from "next/navigation";
+// import { notFound } from "next/navigation";
 
-interface PageProps {
-  params: Promise<{
-    id: string;
+// interface PageProps {
+//   params: Promise<{
+//     id: string;
+//   }>;
+// }
+
+// const ProductDetails = async ({ params }: PageProps) => {
+//   const { id } = await params;
+
+//   if (id !== "1") {
+//     notFound();
+//   }
+
+//   return (
+//     <div>
+//       <h1>Product Details</h1>
+//       <p>Product Id: {id}</p>
+//     </div>
+//   );
+// };
+
+// export default ProductDetails;
+
+
+
+interface PageProps{
+  params:Promise<{
+    id:string;
   }>;
 }
 
-const ProductDetails = async ({ params }: PageProps) => {
-  const { id } = await params;
+const ProductDetails = async({params}:PageProps)=>{
+  const {id}=await params;
+  await new Promise((resolve)=>setTimeout(resolve, 3000));
 
-  if (id !== "1") {
-    notFound();
-  }
-
-  return (
+  return(
     <div>
       <h1>Product Details</h1>
       <p>Product Id: {id}</p>
     </div>
-  );
-};
+  )
 
+}
 export default ProductDetails;
