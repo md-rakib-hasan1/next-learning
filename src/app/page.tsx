@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import CounterPage from './counter';
 
 const AppPage = () => {
   return (
@@ -13,7 +14,7 @@ const AppPage = () => {
       <Link href="/products/phones">Phones</Link>
       <br />
       <Link href="/products/laptops">Laptops</Link>
-      
+      <CounterPage/>
     </div>
   );
 };
