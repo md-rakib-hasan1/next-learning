@@ -1,7 +1,6 @@
 
 "use client";
 
-import React from 'react';
 interface ErrorProps{
     error:Error;
     reset:()=>void;
